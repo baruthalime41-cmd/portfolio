@@ -4,6 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home · Halime Barut</title>
+  <style>
+    /* Photo and intro side by side; on narrow screens they wrap onto two lines */
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .intro img {
+      width: 240px;
+      max-width: 100%; /* never wider than the screen */
+      height: auto;    /* keep the photo's shape */
+      border-radius: 12px;
+    }
+    .intro p {
+      flex: 1;
+      min-width: 220px;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
   <!-- Shared menu: the same on every page. Only aria-current moves. -->
@@ -14,8 +34,11 @@
   </nav>
 
   <main>
-    <h1>Home</h1>
-    <p>Placeholder: a short welcome will go here.</p>
+    <h1>Halime Barut</h1>
+    <div class="intro">
+      <img src="photo.jpg" alt="Halime Barut and Ridvan smiling together" width="240" height="180">
+      <p>Hi, welcome! I'm learning to build things one step at a time, and I love making small, useful websites that make everyday tasks a little easier. The person next to me in the photo is Ridvan, my boyfriend, and I love him very much ❤️</p>
+    </div>
   </main>
 </body>
 </html>
