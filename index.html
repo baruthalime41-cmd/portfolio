@@ -4,41 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home · Halime Barut</title>
-  <style>
-    /* Photo and intro side by side; on narrow screens they wrap onto two lines */
-    .intro {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1.5rem;
-    }
-    .intro img {
-      width: 240px;
-      max-width: 100%; /* never wider than the screen */
-      height: auto;    /* keep the photo's shape */
-      border-radius: 12px;
-    }
-    .intro p {
-      flex: 1;
-      min-width: 220px;
-      margin: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="swipe.js" defer></script>
 </head>
 <body>
+  <h1 class="greeting">Hello, I'm Halime!</h1>
+
   <!-- Shared menu: the same on every page. Only aria-current moves. -->
-  <nav aria-label="Main">
-    <a href="index.html" aria-current="page">Home</a> |
-    <a href="projects.html">Projects</a> |
+  <nav class="site-nav" aria-label="Main">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
   </nav>
 
   <main>
-    <h1>Halime Barut</h1>
-    <div class="intro">
-      <img src="photo.jpg" alt="Halime Barut and Ridvan smiling together" width="240" height="180">
-      <p>Hi, welcome! I'm learning to build things one step at a time, and I love making small, useful websites that make everyday tasks a little easier. The person next to me in the photo is Ridvan, my boyfriend, and I love him very much ❤️</p>
+    <h2>Halime Barut</h2>
+    <div class="photo-text">
+      <img src="photo.jpg" alt="Halime Barut and Rıdvan smiling together" width="240" height="180">
+      <p>Hi, welcome! I'm learning to build things one step at a time, and I love making small, useful websites that make everyday tasks a little easier. The person next to me in the photo is Rıdvan, my boyfriend, and I love him very much ❤️</p>
     </div>
+
+    <div class="photo-text">
+      <img src="photo-2.jpg" alt="Halime Barut and Rıdvan at night by the water, with a lit-up bridge behind them" width="240" height="180">
+      <p>I enjoy being with him; I am truly happy when we are together. If you are curious about my life, you can look at the memories I share with him.</p>
+    </div>
+
+    <div class="swipe-hint"><span>Swipe ← → or keep scrolling ↓ to change page</span><button class="hint-close" type="button" aria-label="Hide hint">×</button></div>
   </main>
 </body>
 </html>
